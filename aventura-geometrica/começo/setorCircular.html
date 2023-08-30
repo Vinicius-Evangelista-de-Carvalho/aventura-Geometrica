@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculadora de Área de Trapézio Irregular</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet"> <link rel="stylesheet" href="./assets/css/estilos.css"> 
+ 
+<link rel="stylesheet" href="./assets/css/setirCircular.css">
+    
+
+</head>
+<body>
+<header>
+<h2>Calculadora de Área de <strong id="nome">setor Circular em um circulo alinhado</strong>!</h2>
+<a href="./index.html">Voltar</a> 
+</header>
+
+
+
+
+<main>
+  <H1>Sabemos que um círculo completo tem um total de 360°. Além disso, sabemos que a área de um círculo pode ser encontrada usando a fórmula A = π r 2 A=\pi r^2 A=πr2, onde r é o raio do círculo. onde, θ é o ângulo que representa o setor dado em graus e r é o raio do círculo.</H1>
+  <label for="baseMaior">Base Maior: </label>
+  <input type="number" id="baseMaior" placeholder="baseMaior"><br><br>
+  
+  <label for="baseMenor">Base Menor: </label>
+  <input type="number" id="baseMenor" placeholder="baseMenor"><br><br>
+  
+  <label for="altura">Altura: </label>
+  <input type="number" id="altura" placeholder="altura"><br><br>
+  
+  <button id="button" type="button" onclick="calcularArea()">Calcular</button>
+<p id="resultado"></p>
+</main>
+
+
+
+
+
+
+
+
+</body>
+<script>
+function calcularArea() {
+  var baseMaior = parseFloat(document.getElementById("baseMaior").value);
+  var baseMenor = parseFloat(document.getElementById("baseMenor").value);
+  var altura = parseFloat(document.getElementById("altura").value);
+  
+  var area = ((baseMaior + baseMenor) / 2) * altura;
+  
+  document.getElementById("resultado").innerHTML = "Área: " + area;
+}
+</script>
+
+
+
+
+
+<footer> 
+    <p>Desenvolvido por <strong>Vinicius Evangelista</strong> welcome &copy;</p> 
+  </footer> 
+</html>

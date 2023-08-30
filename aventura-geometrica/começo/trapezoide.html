@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculadora de Área de Trapézio Irregular</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet"> <link rel="stylesheet" href="./assets/css/trapezoide.css"> 
+<link rel="stylesheet" href="./assets/css/trapezoide.css">
+</head>
+
+
+<body>
+  
+  <header>
+<h2>Calculadora de Área do <strong id="nome">Trapézio Irregular</strong>!</h2>
+<a href="./index.html">Voltar</a> 
+<form id="trapezoidForm">
+</header>
+
+
+
+
+
+<main>
+  <h3 id="h3">A área é a soma das bases vezes a altura dividido por dois.</h3>
+
+
+  
+  <label for="baseMaior">Base Maior: </label>
+  <input type="number" id="baseMaior" placeholder="baseMaior"><br><br>
+  
+  <label for="baseMenor">Base Menor: </label>
+  <input type="number" id="baseMenor" placeholder="baseMenor"><br><br>
+  
+  <label for="altura">Altura: </label>
+  <input type="number" id="altura" placeholder="altura"><br><br>
+  
+  <button id="button" onclick="calcularArea()">Calcular Área</button>
+  <p id="resultado"></p>
+  </main>
+
+
+
+<script>
+function calcularArea() {
+  var baseMaior = parseFloat(document.getElementById("baseMaior").value);
+  var baseMenor = parseFloat(document.getElementById("baseMenor").value);
+  var altura = parseFloat(document.getElementById("altura").value);
+  
+  var area = ((baseMaior + baseMenor) / 2) * altura;
+  
+  document.getElementById("resultado").innerHTML = "Área: " + area;
+}
+</script>
+
+</body>
+<footer> 
+    <p>Desenvolvido por <strong>Vinicius Evangelista</strong> welcome &copy;</p> 
+  </footer> 
+</html>

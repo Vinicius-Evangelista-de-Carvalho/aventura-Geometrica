@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculadora de Área de Quadrado</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet"> <link rel="stylesheet" href="./assets/css/estilos.css"> 
+<link rel="stylesheet" href="./assets/css/quadrado.css">
+</head>
+
+
+
+
+
+<body>
+<header>
+<h2>Calculadora de Área de <strong id="nome">Quadrado</strong>!</h2>
+<a href="./index.html">Voltar</a>
+</header>
+
+
+
+<main>
+  <H1>Para fazer o cálculo da área do quadrado é necessário realizar o produto entre dois lados. Como o quadrado tem lados iguais, basta pegar a medida de um dos lados e elevar ao quadrado. Para a realização usamos a fórmula da área A = b. h, assim um de seus lados será a base (b) e o outro a altura (h).</H1>
+  <label for="lado">Tamanho do Lado: </label>
+  <input type="number" id="lado" placeholder="lado"><br><br>
+  
+  <button id="button" type="button" onclick="calcularArea()">Calcular Área</button>
+  <p id="resultado"></p>
+</main>
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+<script>
+function calcularArea() {
+  var lado = parseFloat(document.getElementById("lado").value);
+  var area = lado * lado;
+  
+  document.getElementById("resultado").innerHTML = "Área: " + area;
+}
+</script>
+
+
+
+
+
+<footer> 
+    <p>Desenvolvido por <strong>Vinicius Evangelista</strong> welcome &copy;</p> 
+  </footer> 
+</html>

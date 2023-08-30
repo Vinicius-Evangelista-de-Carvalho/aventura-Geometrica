@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+ <html lang="pt-br"> 
+ <head> 
+   <meta charset="UTF-8"> 
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+   <title>O Portal das Formas | Hexágono Regular</title> 
+   <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet"> <link rel="stylesheet" href="./assets/css/estilos.css"> 
+    <link rel="stylesheet" href="./assets/css/hexagon.css"> 
+ </head> 
+ <body> 
+  <header> 
+
+
+    <div class="title"> 
+      <h1>Calculadora de Área de <strong id="nome">Hexágono Regular</strong>!</h1> 
+      <a href="./index.html">Voltar</a> 
+    </div> 
+  </header> 
+
+  <main>
+
+
+  <h1>O primeiro método, ele só poderá ser aplicado caso o hexágono seja regular, pois, dessa forma podemos considerar que o hexágono é composto 6 triângulos equiláteros. Como a área de um triângulo equilátero é de A = l²√3/4, logo a área de um hexágono regular é de A = 6l²√3/4.</h1>
+
+  <label> 
+    lado
+    <input type="number" id="lado"  placeholder="lado" min="0">
+    <button onclick="calcularArea()">Calcular Área</button>
+    <p id="resultado"></p>
+  </label> 
+  </main>
+
+
+  </body>
+  <script>
+    function calcularArea() {
+      var lado = parseFloat(document.getElementById("lado").value);
+      var area = 3 * Math.sqrt(3) * Math.pow(lado, 2) / 2;
+      document.getElementById("resultado").textContent = "A área do hexágono é: " + area.toFixed(2);
+    }
+  </script>
+
+ <footer> 
+  <p>Desenvolvido por <strong>Vinicius Evangelista</strong> welcome &copy;</p> 
+</footer> 
+ </html>

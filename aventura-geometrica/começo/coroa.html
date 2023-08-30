@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html lang="pt-br"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Área da Coroa do Círculo</title> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet"> <link rel="stylesheet" href="./assets/css/estilos.css"> 
+  <link rel="stylesheet" href="./assets/css/coroa.css"> 
+
+</head> 
+<body> 
+  <header> 
+    <div class="title"> 
+      <h1>Calculadora de Área da <strong id="nome">coroa do Círculo</strong>!</h1> 
+      <a href="./index.html">Voltar</a> 
+    </div> 
+  </header> 
+  
+  <main> 
+    <h3>A área da coroa do círculo pode ser calculada através da diferença entre as áreas totais, isto é, área do círculo maior menos a área do círculo menor. Quando duas ou mais circunferências possuem o mesmo centro, são denominadas concêntricas. Nesse caso elas podem ter raio de tamanhos diferentes.</h3>
+    <form> 
+      <div class="form"> 
+        <label> 
+          Raio Maior 
+          <input type="number" id="raioMaior" placeholder="Raio Maior">
+        </label> 
+  
+        <label> 
+          Raio Menor 
+          <input type="number" id="raioMenor" placeholder="Raio Menor"> 
+        </label> 
+      </div>
+      <div class="btn"> 
+        <input class="btn-form" type="button" value="Calcular" onclick="calculateCoroa()"> 
+      </div> 
+    </form>
+    <p class="res" id="resultadoText">A área da coroa do círculo é: <span id="resultado"></span></p>
+  </main> 
+  
+  <script>
+    const calculateCoroa = () => {
+      let raioMaior = parseFloat(document.querySelector('#raioMaior').value);
+      let raioMenor = parseFloat(document.querySelector('#raioMenor').value);
+  
+      let calcArea = Math.PI * (Math.pow(raioMaior, 2) - Math.pow(raioMenor, 2));
+      let resultadoElement = document.querySelector('#resultado');
+      resultadoElement.textContent = calcArea.toFixed(2); // Mostrar o resultado com 2 casas decimais
+      
+      let resultadoText = document.querySelector('#resultadoText');
+      resultadoText.style.display = 'block'; // Exibir o resultado
+    }
+  </script>
+     <footer> 
+      <p>Desenvolvido por <strong>Vinicius Evangelista</strong> welcome &copy;</p> 
+    </footer> 
+</body>
+</html>

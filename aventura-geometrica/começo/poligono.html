@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculadora de Área de Polígono Regular</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet"> <link rel="stylesheet" href="./assets/css/poligono.css"> 
+<link rel="stylesheet" href="./assets/css/poligono.css">
+</head>
+<body>
+
+
+
+  <header>
+<h2>Calculadora de Área de <strong id="nome">Polígono Regular</strong>!</h2>
+<a href="./index.html">Voltar</a>
+  </header>
+
+
+  
+<main>
+<H1>O apótema é um segmento de reta que une o centro do polígono ao meio de um dos lados. Os polígonos regulares são que possuem todos os lados e ângulos de mesma medida. Para calcular a áreas dos polígonos regulares, a fórmula geral é: semiperímetro multiplicado pelo apótema.</H1>
+
+  <label for="lado">Tamanho do Lado: </label>
+  <input type="number" id="lado" placeholder="Tamanho do Lado"><br><br>
+  
+  <label for="numeroLados">Número de Lados (N): </label>
+  <input type="number" id="numeroLados" placeholder="Número de Lados (N)"><br><br>
+  
+
+
+  <button id="button" type="button" onclick="calcularArea()">Calcular Área</button>
+<p id="resultado"></p>
+</main>
+
+
+
+
+</body>
+
+<script>
+function calcularArea() {
+  var lado = parseFloat(document.getElementById("lado").value);
+  var numeroLados = parseInt(document.getElementById("numeroLados").value);
+  
+  var apotema = lado / (2 * Math.tan(Math.PI / numeroLados));
+  var area = (numeroLados * lado * apotema) / 2;
+  
+  document.getElementById("resultado").innerHTML = "Área: " + area;
+}
+</script>
+
+
+<footer> 
+    <p>Desenvolvido por <strong>Vinicius Evangelista</strong> welcome &copy;</p> 
+  </footer> 
+</html>

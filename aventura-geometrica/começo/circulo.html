@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    
+    <title>Calculadora de Área de Círculo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet"> <link rel="stylesheet" href="./assets/css/estilos.css"> 
+   
+    <link rel="stylesheet" href="./assets/css/circulo.css">
+    
+</head>
+
+<body>
+
+    <header> 
+        <div class="title"> 
+          <h1>Calculadora de <strong id="nome">Área de Círculo</strong>!</h1> 
+          <a id="link" href="./index.html">Voltar</a> 
+        </div> 
+      </header> 
+
+
+      <main>
+        <h1>A área de um círculo é a quantidade de espaço que ele ocupa em uma superfície plana. Para calcular essa área, usamos a fórmula A = π * r². - "A" representa a área do círculo. - "π" (pi) é uma constante matemática que representa a razão entre a circunferência de um círculo e seu diâmetro.É aproximadamente igual a 3.14159, mas pode ser usado com mais casas decimais em cálculos precisos.</h1>    
+      <label for="base">Raio:</label>
+      <input type="number" id="raio" step="any" placeholder="Digite o raio"><br><br>
+      
+    <button onclick="calcularArea()">Calcular</button>
+    <p id="resultado"></p>
+
+    
+  </main>
+    
+
+</body>
+
+
+
+<script>
+    function calcularArea() {
+        var raio = parseFloat(document.getElementById("raio").value);
+        var area = Math.PI * raio * raio;
+        document.getElementById("resultado").innerHTML = "A área do círculo é: " + area.toFixed(2);
+    }
+</script>
+
+
+<footer> 
+    <p>Desenvolvido por <strong>Vinicius Evangelista</strong> welcome &copy;</p> 
+  </footer> 
+
+</html>

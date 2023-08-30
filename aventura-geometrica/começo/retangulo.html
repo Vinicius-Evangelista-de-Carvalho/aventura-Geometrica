@@ -1,0 +1,92 @@
+<!DOCTYPE html> 
+ <html lang="pt-br"> 
+ <head> 
+   <meta charset="UTF-8"> 
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+   <title>O Portal das Formas | Retângulo</title>  
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet"> 
+   <link rel="stylesheet" href="./assets/css/retangulo.css"> 
+ </head> 
+ <body> 
+   <header> 
+     <div class="title">
+       <h1>Calculadora de area do <strong id="nome">retangulo</strong>!</h1> 
+  
+     </div> 
+  
+     <a href="./index.html">Voltar</a> 
+   </header> 
+  
+   <main> 
+     <H3>O retângulo é um caso particular de quadrilátero, fazendo parte do grupo daqueles que possuem todos os ângulos internos retos. Para calcular a área do retângulo, basta calcular o produto entre a sua base e a sua altura, ou seja, a área é dada pela fórmula A=b⋅h. Além da área, outra grandeza importante é o perímetro.</H3>
+     <form> 
+      <div class="form"> 
+
+
+       <label> 
+         Base 
+         <input type="number" id="base" placeholder="Base"> 
+       </label> 
+         <label> 
+         Altura 
+         <input type="number" id="altura" placeholder="Altura"> 
+       </label> 
+      </div> 
+  
+       <div class="btn"> 
+         <input class="btn-form disabled" type="button" value="Calcular" disabled> 
+       </div> 
+     </form> 
+  
+     <div class="res"> 
+       <h3></h3> 
+     </div> 
+   </main> 
+  
+
+ </body> 
+
+<script>
+  let btn = document.querySelector('.btn-form') 
+  let base = document.querySelector('#base') 
+  let altura = document.querySelector('#altura') 
+   
+  const calculate = (e) => { 
+    e.preventDefault() 
+   
+    let res = document.querySelector('.res h3') 
+    let calc = base.value * altura.value 
+   
+    res.innerHTML = `A área do Retângulo é: ${calc.toFixed(2)}m²` 
+    resetInput() 
+  } 
+   
+  const resetInput = () => { 
+    base.value = '' 
+    altura.value = '' 
+   
+    btn.setAttribute('disabled', '') 
+    btn.classList.add('disabled') 
+  } 
+   
+  const btnActivated = () => { 
+    if(base.value > 0 && altura.value > 0){ 
+      btn.removeAttribute('disabled', '') 
+      btn.classList.remove('disabled') 
+      return 
+    } 
+   
+    btn.setAttribute('disabled', '') 
+    btn.classList.add('disabled') 
+  } 
+   
+  base.addEventListener('input', btnActivated) 
+  altura.addEventListener('input', btnActivated) 
+  btn.addEventListener('click', calculate)
+  </script>
+   <footer> 
+    <p>Desenvolvido por <strong>Vinicius Evangelista</strong> welcome &copy;</p> 
+  </footer> 
+ </html>
